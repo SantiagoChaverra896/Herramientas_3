@@ -35,8 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblAdminFacturas = new MaterialSkin.Controls.MaterialLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgFacturas = new System.Windows.Forms.DataGridView();
             this.NroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,31 +50,41 @@
             this.btnNuevaFactura = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.pnlTitulo.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlTitulo
-            // 
-            this.pnlTitulo.Controls.Add(this.lblAdminFacturas);
-            this.pnlTitulo.Location = new System.Drawing.Point(4, 2);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(928, 87);
-            this.pnlTitulo.TabIndex = 0;
             // 
             // lblAdminFacturas
             // 
             this.lblAdminFacturas.AutoSize = true;
             this.lblAdminFacturas.Depth = 0;
+            this.lblAdminFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAdminFacturas.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblAdminFacturas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAdminFacturas.Location = new System.Drawing.Point(280, 26);
+            this.lblAdminFacturas.Location = new System.Drawing.Point(2, 0);
+            this.lblAdminFacturas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdminFacturas.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblAdminFacturas.Name = "lblAdminFacturas";
-            this.lblAdminFacturas.Size = new System.Drawing.Size(337, 27);
+            this.lblAdminFacturas.Size = new System.Drawing.Size(526, 30);
             this.lblAdminFacturas.TabIndex = 0;
             this.lblAdminFacturas.Text = "ADMINISTRACION DE FACTURAS";
+            this.lblAdminFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblAdminFacturas, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(530, 307);
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
@@ -83,13 +93,17 @@
             this.panel1.Controls.Add(this.btnNuevaFactura);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.materialSingleLineTextField1);
-            this.panel1.Location = new System.Drawing.Point(5, 92);
+            this.panel1.Location = new System.Drawing.Point(2, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 369);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(526, 240);
+            this.panel1.TabIndex = 2;
             // 
             // dgFacturas
             // 
+            this.dgFacturas.AllowUserToAddRows = false;
+            this.dgFacturas.AllowUserToDeleteRows = false;
+            this.dgFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NroFactura,
@@ -99,13 +113,14 @@
             this.Estado,
             this.btnEditar,
             this.btnBorrar});
-            this.dgFacturas.Location = new System.Drawing.Point(44, 100);
+            this.dgFacturas.Location = new System.Drawing.Point(9, 62);
+            this.dgFacturas.Margin = new System.Windows.Forms.Padding(2);
             this.dgFacturas.Name = "dgFacturas";
+            this.dgFacturas.RowHeadersVisible = false;
             this.dgFacturas.RowHeadersWidth = 62;
             this.dgFacturas.RowTemplate.Height = 28;
-            this.dgFacturas.Size = new System.Drawing.Size(835, 187);
+            this.dgFacturas.Size = new System.Drawing.Size(508, 122);
             this.dgFacturas.TabIndex = 4;
-            this.dgFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFacturas_CellContentClick);
             // 
             // NroFactura
             // 
@@ -116,7 +131,6 @@
             this.NroFactura.HeaderText = "NRO FACTURA";
             this.NroFactura.MinimumWidth = 8;
             this.NroFactura.Name = "NroFactura";
-            this.NroFactura.Width = 120;
             // 
             // Cliente
             // 
@@ -127,7 +141,6 @@
             this.Cliente.HeaderText = "CLIENTE";
             this.Cliente.MinimumWidth = 8;
             this.Cliente.Name = "Cliente";
-            this.Cliente.Width = 180;
             // 
             // Emision
             // 
@@ -138,7 +151,6 @@
             this.Emision.HeaderText = "EMISION";
             this.Emision.MinimumWidth = 8;
             this.Emision.Name = "Emision";
-            this.Emision.Width = 90;
             // 
             // Valor
             // 
@@ -149,7 +161,6 @@
             this.Valor.HeaderText = "VALOR";
             this.Valor.MinimumWidth = 8;
             this.Valor.Name = "Valor";
-            this.Valor.Width = 120;
             // 
             // Estado
             // 
@@ -160,7 +171,6 @@
             this.Estado.HeaderText = "ESTADO";
             this.Estado.MinimumWidth = 8;
             this.Estado.Name = "Estado";
-            this.Estado.Width = 80;
             // 
             // btnEditar
             // 
@@ -174,7 +184,6 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseColumnTextForButtonValue = true;
-            this.btnEditar.Width = 80;
             // 
             // btnBorrar
             // 
@@ -188,42 +197,42 @@
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseColumnTextForButtonValue = true;
-            this.btnBorrar.Width = 80;
             // 
             // btnSalir
             // 
             this.btnSalir.Depth = 0;
-            this.btnSalir.Location = new System.Drawing.Point(732, 306);
+            this.btnSalir.Location = new System.Drawing.Point(419, 201);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Primary = true;
-            this.btnSalir.Size = new System.Drawing.Size(147, 40);
+            this.btnSalir.Size = new System.Drawing.Size(98, 26);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnNuevaFactura
             // 
             this.btnNuevaFactura.Depth = 0;
-            this.btnNuevaFactura.Location = new System.Drawing.Point(665, 28);
+            this.btnNuevaFactura.Location = new System.Drawing.Point(374, 23);
+            this.btnNuevaFactura.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevaFactura.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNuevaFactura.Name = "btnNuevaFactura";
             this.btnNuevaFactura.Primary = true;
-            this.btnNuevaFactura.Size = new System.Drawing.Size(214, 40);
+            this.btnNuevaFactura.Size = new System.Drawing.Size(143, 26);
             this.btnNuevaFactura.TabIndex = 2;
             this.btnNuevaFactura.Text = "NUEVA FACTURA";
             this.btnNuevaFactura.UseVisualStyleBackColor = true;
-            this.btnNuevaFactura.Click += new System.EventHandler(this.btnNuevaFactura_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Depth = 0;
-            this.btnBuscar.Location = new System.Drawing.Point(475, 28);
+            this.btnBuscar.Location = new System.Drawing.Point(248, 23);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Primary = true;
-            this.btnBuscar.Size = new System.Drawing.Size(147, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(98, 26);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -232,30 +241,31 @@
             // 
             this.materialSingleLineTextField1.Depth = 0;
             this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(47, 36);
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(9, 23);
+            this.materialSingleLineTextField1.Margin = new System.Windows.Forms.Padding(2);
             this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
             this.materialSingleLineTextField1.PasswordChar = '\0';
             this.materialSingleLineTextField1.SelectedText = "";
             this.materialSingleLineTextField1.SelectionLength = 0;
             this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(314, 32);
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(209, 23);
             this.materialSingleLineTextField1.TabIndex = 0;
             this.materialSingleLineTextField1.Text = "Buscar por Cliente:";
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
             // frmFacturas2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 473);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlTitulo);
+            this.ClientSize = new System.Drawing.Size(530, 307);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmFacturas2";
             this.Text = "frmFacturas2";
-            this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).EndInit();
             this.ResumeLayout(false);
@@ -263,15 +273,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlTitulo;
         private MaterialSkin.Controls.MaterialLabel lblAdminFacturas;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private System.Windows.Forms.DataGridView dgFacturas;
-        private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
-        private MaterialSkin.Controls.MaterialRaisedButton btnNuevaFactura;
-        private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emision;
@@ -279,5 +284,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewButtonColumn btnEditar;
         private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
+        private MaterialSkin.Controls.MaterialRaisedButton btnNuevaFactura;
+        private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
     }
 }

@@ -32,44 +32,51 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgCategorias = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.pnlTitulo.SuspendLayout();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tableLayoutPanel1.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCategorias)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlTitulo
+            // tableLayoutPanel1
             // 
-            this.pnlTitulo.Controls.Add(this.materialLabel1);
-            this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(977, 91);
-            this.pnlTitulo.TabIndex = 4;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.pnlContenedor, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 356);
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // materialLabel1
             // 
-            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
+            this.materialLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(343, 26);
+            this.materialLabel1.Location = new System.Drawing.Point(2, 0);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(261, 27);
-            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Size = new System.Drawing.Size(545, 35);
+            this.materialLabel1.TabIndex = 1;
             this.materialLabel1.Text = "CATEGORÍA PRODUCTOS";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -80,70 +87,60 @@
             this.pnlContenedor.Controls.Add(this.dgCategorias);
             this.pnlContenedor.Controls.Add(this.btnBuscar);
             this.pnlContenedor.Controls.Add(this.txtBuscar);
-            this.pnlContenedor.Location = new System.Drawing.Point(12, 97);
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(2, 37);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(953, 479);
-            this.pnlContenedor.TabIndex = 5;
+            this.pnlContenedor.Size = new System.Drawing.Size(545, 317);
+            this.pnlContenedor.TabIndex = 6;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Depth = 0;
+            this.btnNuevo.Location = new System.Drawing.Point(411, 23);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Primary = true;
+            this.btnNuevo.Size = new System.Drawing.Size(98, 25);
+            this.btnNuevo.TabIndex = 8;
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalir.Depth = 0;
-            this.btnSalir.Location = new System.Drawing.Point(762, 360);
+            this.btnSalir.Location = new System.Drawing.Point(403, 232);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Primary = true;
-            this.btnSalir.Size = new System.Drawing.Size(148, 41);
+            this.btnSalir.Size = new System.Drawing.Size(99, 27);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dgCategorias
             // 
+            this.dgCategorias.AllowUserToAddRows = false;
+            this.dgCategorias.AllowUserToDeleteRows = false;
             this.dgCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.DescripcionCategoria,
             this.btnEditar,
             this.btnBorrar});
-            this.dgCategorias.Location = new System.Drawing.Point(149, 103);
+            this.dgCategorias.Location = new System.Drawing.Point(54, 70);
+            this.dgCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.dgCategorias.Name = "dgCategorias";
+            this.dgCategorias.RowHeadersVisible = false;
             this.dgCategorias.RowHeadersWidth = 62;
             this.dgCategorias.RowTemplate.Height = 28;
-            this.dgCategorias.Size = new System.Drawing.Size(670, 215);
+            this.dgCategorias.Size = new System.Drawing.Size(447, 140);
             this.dgCategorias.TabIndex = 7;
-            this.dgCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategorias_CellContentClick);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.Depth = 0;
-            this.btnBuscar.Location = new System.Drawing.Point(590, 22);
-            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Primary = true;
-            this.btnBuscar.Size = new System.Drawing.Size(148, 41);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Depth = 0;
-            this.txtBuscar.Hint = "Buscar Categoría:";
-            this.txtBuscar.Location = new System.Drawing.Point(54, 31);
-            this.txtBuscar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.SelectionLength = 0;
-            this.txtBuscar.SelectionStart = 0;
-            this.txtBuscar.Size = new System.Drawing.Size(332, 32);
-            this.txtBuscar.TabIndex = 3;
-            this.txtBuscar.UseSystemPasswordChar = false;
             // 
             // Codigo
             // 
@@ -154,7 +151,6 @@
             this.Codigo.HeaderText = "CODIGO";
             this.Codigo.MinimumWidth = 8;
             this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 120;
             // 
             // DescripcionCategoria
             // 
@@ -165,7 +161,6 @@
             this.DescripcionCategoria.HeaderText = "DESCRIPCION CATEGORIA";
             this.DescripcionCategoria.MinimumWidth = 8;
             this.DescripcionCategoria.Name = "DescripcionCategoria";
-            this.DescripcionCategoria.Width = 300;
             // 
             // btnEditar
             // 
@@ -179,7 +174,6 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseColumnTextForButtonValue = true;
-            this.btnEditar.Width = 80;
             // 
             // btnBorrar
             // 
@@ -195,33 +189,50 @@
             this.btnBorrar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseColumnTextForButtonValue = true;
-            this.btnBorrar.Width = 80;
             // 
-            // btnNuevo
+            // btnBuscar
             // 
-            this.btnNuevo.Depth = 0;
-            this.btnNuevo.Location = new System.Drawing.Point(762, 23);
-            this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Primary = true;
-            this.btnNuevo.Size = new System.Drawing.Size(147, 39);
-            this.btnNuevo.TabIndex = 8;
-            this.btnNuevo.Text = "NUEVO";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.Location = new System.Drawing.Point(291, 21);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Primary = true;
+            this.btnBuscar.Size = new System.Drawing.Size(99, 27);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Depth = 0;
+            this.txtBuscar.Hint = "Buscar Categoría:";
+            this.txtBuscar.Location = new System.Drawing.Point(54, 21);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.SelectionLength = 0;
+            this.txtBuscar.SelectionStart = 0;
+            this.txtBuscar.Size = new System.Drawing.Size(221, 23);
+            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.UseSystemPasswordChar = false;
             // 
             // frmCategoriaProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 548);
-            this.Controls.Add(this.pnlContenedor);
-            this.Controls.Add(this.pnlTitulo);
+            this.ClientSize = new System.Drawing.Size(549, 356);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCategoriaProductos";
             this.Text = "frmCategoriaProductos";
-            this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.pnlContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgCategorias)).EndInit();
             this.ResumeLayout(false);
@@ -230,17 +241,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlTitulo;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel pnlContenedor;
+        private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
         private System.Windows.Forms.DataGridView dgCategorias;
-        private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionCategoria;
         private System.Windows.Forms.DataGridViewButtonColumn btnEditar;
         private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
-        private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
+        private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

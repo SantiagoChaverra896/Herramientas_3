@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dgRoles = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pnlTitulo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRoles)).BeginInit();
@@ -52,9 +52,10 @@
             // pnlTitulo
             // 
             this.pnlTitulo.Controls.Add(this.materialLabel1);
-            this.pnlTitulo.Location = new System.Drawing.Point(2, 1);
+            this.pnlTitulo.Location = new System.Drawing.Point(1, 1);
+            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(927, 71);
+            this.pnlTitulo.Size = new System.Drawing.Size(618, 46);
             this.pnlTitulo.TabIndex = 0;
             // 
             // materialLabel1
@@ -63,10 +64,11 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(339, 22);
+            this.materialLabel1.Location = new System.Drawing.Point(226, 14);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(211, 27);
+            this.materialLabel1.Size = new System.Drawing.Size(145, 19);
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "ROLES EMPLEADOS";
             // 
@@ -78,115 +80,61 @@
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.materialSingleLineTextField1);
-            this.panel1.Location = new System.Drawing.Point(2, 69);
+            this.panel1.Location = new System.Drawing.Point(1, 45);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 394);
+            this.panel1.Size = new System.Drawing.Size(618, 256);
             this.panel1.TabIndex = 1;
-            // 
-            // materialSingleLineTextField1
-            // 
-            this.materialSingleLineTextField1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "Buscar Rol:";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(72, 27);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(328, 32);
-            this.materialSingleLineTextField1.TabIndex = 0;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(538, 18);
-            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Primary = true;
-            this.btnActualizar.Size = new System.Drawing.Size(147, 41);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "ACTUALIZAR";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNuevo.Depth = 0;
-            this.btnNuevo.Location = new System.Drawing.Point(705, 18);
-            this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Primary = true;
-            this.btnNuevo.Size = new System.Drawing.Size(147, 41);
-            this.btnNuevo.TabIndex = 2;
-            this.btnNuevo.Text = "NUEVO";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.Depth = 0;
-            this.btnSalir.Location = new System.Drawing.Point(705, 283);
-            this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Primary = true;
-            this.btnSalir.Size = new System.Drawing.Size(147, 42);
-            this.btnSalir.TabIndex = 3;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dgRoles
             // 
+            this.dgRoles.AllowUserToAddRows = false;
+            this.dgRoles.AllowUserToDeleteRows = false;
             this.dgRoles.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.DescripcionRol,
             this.btnEditar,
             this.btnBorrar});
-            this.dgRoles.Location = new System.Drawing.Point(74, 93);
+            this.dgRoles.Location = new System.Drawing.Point(49, 60);
+            this.dgRoles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgRoles.Name = "dgRoles";
+            this.dgRoles.RowHeadersVisible = false;
             this.dgRoles.RowHeadersWidth = 62;
             this.dgRoles.RowTemplate.Height = 28;
-            this.dgRoles.Size = new System.Drawing.Size(778, 164);
+            this.dgRoles.Size = new System.Drawing.Size(519, 107);
             this.dgRoles.TabIndex = 4;
             this.dgRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRoles_CellContentClick);
             // 
             // Codigo
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.Codigo.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Codigo.DefaultCellStyle = dataGridViewCellStyle1;
             this.Codigo.HeaderText = "CODIGO";
             this.Codigo.MinimumWidth = 8;
             this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 150;
             // 
             // DescripcionRol
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.DescripcionRol.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.DescripcionRol.DefaultCellStyle = dataGridViewCellStyle2;
             this.DescripcionRol.HeaderText = "DESCRIPCION ROL";
             this.DescripcionRol.MinimumWidth = 8;
             this.DescripcionRol.Name = "DescripcionRol";
-            this.DescripcionRol.Width = 250;
             // 
             // btnEditar
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.btnEditar.DefaultCellStyle = dataGridViewCellStyle3;
             this.btnEditar.HeaderText = "EDITAR";
             this.btnEditar.MinimumWidth = 8;
             this.btnEditar.Name = "btnEditar";
@@ -194,13 +142,12 @@
             this.btnEditar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseColumnTextForButtonValue = true;
-            this.btnEditar.Width = 150;
             // 
             // btnBorrar
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.DefaultCellStyle = dataGridViewCellStyle4;
             this.btnBorrar.HeaderText = "BORRAR";
             this.btnBorrar.MinimumWidth = 8;
             this.btnBorrar.Name = "btnBorrar";
@@ -208,16 +155,78 @@
             this.btnBorrar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseColumnTextForButtonValue = true;
-            this.btnBorrar.Width = 150;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Depth = 0;
+            this.btnSalir.Location = new System.Drawing.Point(470, 184);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Primary = true;
+            this.btnSalir.Size = new System.Drawing.Size(98, 27);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNuevo.Depth = 0;
+            this.btnNuevo.Location = new System.Drawing.Point(470, 12);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Primary = true;
+            this.btnNuevo.Size = new System.Drawing.Size(98, 27);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnActualizar.Depth = 0;
+            this.btnActualizar.Location = new System.Drawing.Point(359, 12);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Primary = true;
+            this.btnActualizar.Size = new System.Drawing.Size(98, 27);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // materialSingleLineTextField1
+            // 
+            this.materialSingleLineTextField1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.Hint = "Buscar Rol:";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(48, 18);
+            this.materialSingleLineTextField1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(219, 23);
+            this.materialSingleLineTextField1.TabIndex = 0;
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
             // frmRolesEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 473);
+            this.ClientSize = new System.Drawing.Size(620, 307);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRolesEmpleados";
             this.Text = "frmRolesEmpleados";
             this.pnlTitulo.ResumeLayout(false);
