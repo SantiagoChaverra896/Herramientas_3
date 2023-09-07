@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,11 @@ namespace Pantallas_Sistema_facturación
         public frmCategoriaProductos()
         {
             InitializeComponent();
-            llenar_grid();
         }
-
+        SqlConnection conexion;
+        SqlCommand cmd;
+        DataTable table = new DataTable();
+        Acceso_datos acceso_Datos = new Acceso_datos();
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,29 +28,41 @@ namespace Pantallas_Sistema_facturación
 
         public void llenar_grid()
         {
-            for (int i = 1; i < 10; i++)
+            dgCategorias.Rows.Clear();
+            string strconsulta = "SELECT IdCategoria, StrDescripcion FROM TBLCATEGORIA_PROD";
+            table = acceso_Datos.EjecutarComandoDatos(strconsulta);
+
+            foreach (DataRow row in table.Rows)
             {
-                dgCategorias.Rows.Add(i, $"Categoría {i + 1}");
+                dgCategorias.Rows.Add(row[0], row[1]);
             }
-
-
         }
 
         private void dgCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgCategorias.Columns[e.ColumnIndex].Name == "btnBorrar") // verificamos el boton que se presionó, de acuerdo con el nombre de la columna 
+            if (e.ColumnIndex == dgCategorias.Columns["btnBorrar"].Index && e.RowIndex >= 0)
+                {
+                    int indiceFila = e.RowIndex;
+                    int posActual = Convert.ToInt32(dgCategorias.Rows[e.RowIndex].Cells[0].Value);
+                    string Categ = Convert.ToString(dgCategorias.Rows[e.RowIndex].Cells[1].Value);
+                if (MessageBox.Show("Seguro borrar: " + Categ, "CONFIRMACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string sentencia = $"Exec Eliminar_CategoriaProducto {posActual}";
+                        string mensaje = acceso_Datos.EjecutarComando(sentencia);
+                    if (indiceFila >= 0 && indiceFila < dgCategorias.Rows.Count)
+                        {
+                            dgCategorias.Rows.RemoveAt(indiceFila);
+                        }
+                    }
+                }
+            if (e.ColumnIndex == dgCategorias.Columns["btnEditar"].Index && e.RowIndex >= 0)
             {
-                int posActual = dgCategorias.CurrentRow.Index; //verifico cual fila fue seleccionada
-                if (MessageBox.Show("Seguro borrar", "CONFIRMACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    MessageBox.Show($"BORRANDO indice {e.RowIndex} ID {dgCategorias[0, posActual].Value.ToString()}");// sacamos mensaje
-
-            }
-            if (dgCategorias.Columns[e.ColumnIndex].Name == "btnEditar") // verifica si presiono un boton editar
-            {
-                int posActual = dgCategorias.CurrentRow.Index; //verifico cual fila fue seleccionada
-                frmEditarCategoria categoria = new frmEditarCategoria();// instanciamos el formulario
-                categoria.IdCategoria = int.Parse(dgCategorias[0, posActual].Value.ToString());// pasamos al formulario de edicion el Id del cliente seleccionado
-                categoria.ShowDialog(); // mostramos el formulario de forma modal
+                int posActual = Convert.ToInt32(dgCategorias.Rows[e.RowIndex].Cells[0].Value); 
+                string Categ = Convert.ToString(dgCategorias.Rows[e.RowIndex].Cells[1].Value);
+                frmEditarCategoria categoria = new frmEditarCategoria();
+                categoria.IdCategoria = posActual;
+                categoria.Ncategoria = Categ;
+                categoria.ShowDialog();
             }
         }
 
@@ -56,6 +71,17 @@ namespace Pantallas_Sistema_facturación
             frmEditarCategoria categoria = new frmEditarCategoria();
             categoria.IdCategoria = 0;
             categoria.ShowDialog();
+        }
+
+        private void frmCategoriaProductos_Load(object sender, EventArgs e)
+        {
+            llenar_grid();
+        }
+
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            frmEditarCategoria frmEditarCategoria = new frmEditarCategoria();
+            frmEditarCategoria.ShowDialog();
         }
     }
 }

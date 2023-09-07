@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlContenido = new System.Windows.Forms.Panel();
             this.dgClientes = new System.Windows.Forms.DataGridView();
-            this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.strTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnSALIR = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.strTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlContenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -62,7 +64,7 @@
             this.pnlContenido.Controls.Add(this.txtBuscar);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(2, 40);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(2);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(499, 338);
             this.pnlContenido.TabIndex = 3;
@@ -80,10 +82,12 @@
             this.strCliente,
             this.strDocumento,
             this.strTelefono,
+            this.Direccion,
+            this.Correo,
             this.btnEditar,
             this.btnBorrar});
             this.dgClientes.Location = new System.Drawing.Point(0, 58);
-            this.dgClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgClientes.Margin = new System.Windows.Forms.Padding(2);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.RowHeadersVisible = false;
             this.dgClientes.RowHeadersWidth = 62;
@@ -92,79 +96,12 @@
             this.dgClientes.TabIndex = 4;
             this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
             // 
-            // Id_Cliente
-            // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.White;
-            this.Id_Cliente.DefaultCellStyle = dataGridViewCellStyle37;
-            this.Id_Cliente.HeaderText = "ID";
-            this.Id_Cliente.MinimumWidth = 8;
-            this.Id_Cliente.Name = "Id_Cliente";
-            // 
-            // strCliente
-            // 
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
-            this.strCliente.DefaultCellStyle = dataGridViewCellStyle38;
-            this.strCliente.HeaderText = "CLIENTE";
-            this.strCliente.MinimumWidth = 8;
-            this.strCliente.Name = "strCliente";
-            // 
-            // strDocumento
-            // 
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
-            this.strDocumento.DefaultCellStyle = dataGridViewCellStyle39;
-            this.strDocumento.HeaderText = "DOCUMENTO";
-            this.strDocumento.MinimumWidth = 8;
-            this.strDocumento.Name = "strDocumento";
-            // 
-            // strTelefono
-            // 
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
-            this.strTelefono.DefaultCellStyle = dataGridViewCellStyle40;
-            this.strTelefono.HeaderText = "TELEFONO";
-            this.strTelefono.MinimumWidth = 8;
-            this.strTelefono.Name = "strTelefono";
-            // 
-            // btnEditar
-            // 
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.DefaultCellStyle = dataGridViewCellStyle41;
-            this.btnEditar.HeaderText = "EDITAR";
-            this.btnEditar.MinimumWidth = 8;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseColumnTextForButtonValue = true;
-            // 
-            // btnBorrar
-            // 
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
-            this.btnBorrar.DefaultCellStyle = dataGridViewCellStyle42;
-            this.btnBorrar.HeaderText = "BORRAR";
-            this.btnBorrar.MinimumWidth = 8;
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Text = "BORRAR";
-            this.btnBorrar.UseColumnTextForButtonValue = true;
-            // 
             // btnSALIR
             // 
             this.btnSALIR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSALIR.Depth = 0;
             this.btnSALIR.Location = new System.Drawing.Point(390, 241);
-            this.btnSALIR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSALIR.Margin = new System.Windows.Forms.Padding(2);
             this.btnSALIR.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSALIR.Name = "btnSALIR";
             this.btnSALIR.Primary = true;
@@ -179,7 +116,7 @@
             this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNuevo.Depth = 0;
             this.btnNuevo.Location = new System.Drawing.Point(390, 15);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Primary = true;
@@ -194,7 +131,7 @@
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.Depth = 0;
             this.btnBuscar.Location = new System.Drawing.Point(271, 15);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Primary = true;
@@ -209,7 +146,7 @@
             this.txtBuscar.Depth = 0;
             this.txtBuscar.Hint = "Buscar por Cliente:";
             this.txtBuscar.Location = new System.Drawing.Point(15, 19);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.PasswordChar = '\0';
@@ -251,6 +188,87 @@
             this.materialLabel1.Text = "ADMINISTRACIÓN DE CLIENTES";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Id_Cliente
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.Id_Cliente.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Id_Cliente.HeaderText = "ID";
+            this.Id_Cliente.MinimumWidth = 8;
+            this.Id_Cliente.Name = "Id_Cliente";
+            // 
+            // strCliente
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.strCliente.DefaultCellStyle = dataGridViewCellStyle2;
+            this.strCliente.HeaderText = "CLIENTE";
+            this.strCliente.MinimumWidth = 8;
+            this.strCliente.Name = "strCliente";
+            // 
+            // strDocumento
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.strDocumento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.strDocumento.HeaderText = "DOCUMENTO";
+            this.strDocumento.MinimumWidth = 8;
+            this.strDocumento.Name = "strDocumento";
+            // 
+            // strTelefono
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.strTelefono.DefaultCellStyle = dataGridViewCellStyle4;
+            this.strTelefono.HeaderText = "TELEFONO";
+            this.strTelefono.MinimumWidth = 8;
+            this.strTelefono.Name = "strTelefono";
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "DIRECCION";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Visible = false;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "CORREO";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Visible = false;
+            // 
+            // btnEditar
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.btnEditar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.btnEditar.HeaderText = "EDITAR";
+            this.btnEditar.MinimumWidth = 8;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseColumnTextForButtonValue = true;
+            // 
+            // btnBorrar
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.btnBorrar.DefaultCellStyle = dataGridViewCellStyle6;
+            this.btnBorrar.HeaderText = "BORRAR";
+            this.btnBorrar.MinimumWidth = 8;
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseColumnTextForButtonValue = true;
+            // 
             // frmListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +276,7 @@
             this.ClientSize = new System.Drawing.Size(503, 380);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaClientes";
             this.Text = "CRUD LISTA CLIENTES";
             this.Load += new System.EventHandler(this.frmListaClientes_Load);
@@ -277,13 +295,15 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
         private MaterialSkin.Controls.MaterialRaisedButton btnBuscar;
         private System.Windows.Forms.DataGridView dgClientes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn strCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn strDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn strTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewButtonColumn btnEditar;
         private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

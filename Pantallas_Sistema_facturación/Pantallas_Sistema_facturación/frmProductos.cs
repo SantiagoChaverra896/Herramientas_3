@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,38 +16,52 @@ namespace Pantallas_Sistema_facturación
         public frmProductos()
         {
             InitializeComponent();
-            llenar_gridProductos(); //no encontre la opción de _load, por ende coloque la funcion para llenar el grid una vez se inicialice el componente
         }
-
+        SqlConnection conexion;
+        SqlCommand cmd;
+        DataTable table = new DataTable();
+        Acceso_datos acceso_Datos = new Acceso_datos();
         private void dgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           if (dgProductos.Columns[e.ColumnIndex].Name == "btnBorrar") // verificamos el boton que se presionó, de acuerdo con el nombre de la columna 
+            if (e.ColumnIndex == dgProductos.Columns["btnBorrar"].Index && e.RowIndex >= 0)
             {
-                int posActual = dgProductos.CurrentRow.Index; //verifico cual fila fue seleccionada
-                if (MessageBox.Show("Seguro borrar", "CONFIRMACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    MessageBox.Show($"BORRANDO indice {e.RowIndex} ID {dgProductos[0, posActual].Value.ToString()}");// sacamos mensaje
+                int indiceFila = e.RowIndex;
+                int posActual = Convert.ToInt32(dgProductos.Rows[e.RowIndex].Cells[0].Value);
+                string Prod = Convert.ToString(dgProductos.Rows[e.RowIndex].Cells[1].Value);
+                if (MessageBox.Show("Seguro borrar: " + Prod, "CONFIRMACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string sentencia = $"Exec Eliminar_Producto '{posActual}'";
+                    string mensaje = acceso_Datos.EjecutarComando(sentencia);
+                    if (indiceFila >= 0 && indiceFila < dgProductos.Rows.Count)
+                    {
+                        dgProductos.Rows.RemoveAt(indiceFila);
+                        MessageBox.Show(mensaje);
+                    }
+                }
+            }
+            if (e.ColumnIndex == dgProductos.Columns["btnEditar"].Index && e.RowIndex >= 0)
+            {
+                int posActual = dgProductos.CurrentRow.Index; 
+                frmEditarProductos producto = new frmEditarProductos();
+                producto.IdProductos  = Convert.ToInt32(dgProductos.Rows[e.RowIndex].Cells[0].Value);
+                producto.Producto = Convert.ToString(dgProductos.Rows[e.RowIndex].Cells[1].Value);
+                producto.Categoria = Convert.ToString(dgProductos.Rows[e.RowIndex].Cells[2].Value);
+                producto.Precio = Convert.ToString(dgProductos.Rows[e.RowIndex].Cells[3].Value);
+                producto.Stock = Convert.ToString(dgProductos.Rows[e.RowIndex].Cells[4].Value);
+                producto.ShowDialog(); 
 
             }
-            if (dgProductos.Columns[e.ColumnIndex].Name == "btnEditar") // verifica si presiono un boton editar
-            {
-                int posActual = dgProductos.CurrentRow.Index; //verifico cual fila fue seleccionada
-                frmEditarProductos producto = new frmEditarProductos();// instanciamos el formulario
-                producto.IdProductos  = int.Parse(dgProductos[0, posActual].Value.ToString());// pasamos al formulario de edicion el Id del cliente seleccionado
-                producto.ShowDialog(); // mostramos el formulario de forma modal
-
-            }
-
-
         }
-
         public void llenar_gridProductos()
         {
-            for (int i = 1; i < 10; i++)
+            dgProductos.Rows.Clear();
+            string strconsulta = "Select p.IdProducto, p.StrNombre, cp.StrDescripcion, p.NumPrecioVenta, p.NumStock from TBLPRODUCTO p JOIN TBLCATEGORIA_PROD cp on p.IdCategoria = cp.IdCategoria";
+            table = acceso_Datos.EjecutarComandoDatos(strconsulta);
+
+            foreach (DataRow row in table.Rows)
             {
-                dgProductos.Rows.Add(i, $"Producto {i}", $"Categoría {i}", $"{i*123}", $"{i*54}");
+                dgProductos.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
             }
-
-
         }
 
         private void pnlContenedor_Paint(object sender, PaintEventArgs e)
@@ -64,6 +79,11 @@ namespace Pantallas_Sistema_facturación
         private void btnSALIR_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmProductos_Load(object sender, EventArgs e)
+        {
+            llenar_gridProductos();
         }
     }
 }

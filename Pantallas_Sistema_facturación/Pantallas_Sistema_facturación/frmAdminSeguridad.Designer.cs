@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEliminar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnConsultar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.Txtpasword = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsusario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.MensajeError = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,8 +52,8 @@
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnActualizar);
-            this.panel1.Controls.Add(this.materialSingleLineTextField2);
-            this.panel1.Controls.Add(this.materialSingleLineTextField1);
+            this.panel1.Controls.Add(this.Txtpasword);
+            this.panel1.Controls.Add(this.txtUsusario);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.materialLabel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -73,6 +76,7 @@
             this.btnEliminar.TabIndex = 18;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnConsultar
             // 
@@ -87,6 +91,22 @@
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.Text = "CONSULTAR";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Depth = 0;
+            this.btnSalir.Location = new System.Drawing.Point(384, 236);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Primary = true;
+            this.btnSalir.Size = new System.Drawing.Size(99, 28);
+            this.btnSalir.TabIndex = 16;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnActualizar
             // 
@@ -101,42 +121,43 @@
             this.btnActualizar.TabIndex = 15;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // materialSingleLineTextField2
+            // Txtpasword
             // 
-            this.materialSingleLineTextField2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(20, 144);
-            this.materialSingleLineTextField2.Margin = new System.Windows.Forms.Padding(2);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(303, 23);
-            this.materialSingleLineTextField2.TabIndex = 3;
-            this.materialSingleLineTextField2.Text = "Clave";
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.Txtpasword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txtpasword.Depth = 0;
+            this.Txtpasword.Hint = "";
+            this.Txtpasword.Location = new System.Drawing.Point(20, 144);
+            this.Txtpasword.Margin = new System.Windows.Forms.Padding(2);
+            this.Txtpasword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Txtpasword.Name = "Txtpasword";
+            this.Txtpasword.PasswordChar = '\0';
+            this.Txtpasword.SelectedText = "";
+            this.Txtpasword.SelectionLength = 0;
+            this.Txtpasword.SelectionStart = 0;
+            this.Txtpasword.Size = new System.Drawing.Size(303, 23);
+            this.Txtpasword.TabIndex = 3;
+            this.Txtpasword.Text = "Clave";
+            this.Txtpasword.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // txtUsusario
             // 
-            this.materialSingleLineTextField1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(20, 109);
-            this.materialSingleLineTextField1.Margin = new System.Windows.Forms.Padding(2);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(303, 23);
-            this.materialSingleLineTextField1.TabIndex = 2;
-            this.materialSingleLineTextField1.Text = "Usuario";
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtUsusario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsusario.Depth = 0;
+            this.txtUsusario.Hint = "";
+            this.txtUsusario.Location = new System.Drawing.Point(20, 109);
+            this.txtUsusario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsusario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsusario.Name = "txtUsusario";
+            this.txtUsusario.PasswordChar = '\0';
+            this.txtUsusario.SelectedText = "";
+            this.txtUsusario.SelectionLength = 0;
+            this.txtUsusario.SelectionStart = 0;
+            this.txtUsusario.Size = new System.Drawing.Size(303, 23);
+            this.txtUsusario.TabIndex = 2;
+            this.txtUsusario.Text = "Usuario";
+            this.txtUsusario.UseSystemPasswordChar = false;
             // 
             // comboBox1
             // 
@@ -162,21 +183,6 @@
             this.materialLabel2.Size = new System.Drawing.Size(84, 19);
             this.materialLabel2.TabIndex = 0;
             this.materialLabel2.Text = "Empleado: ";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.Depth = 0;
-            this.btnSalir.Location = new System.Drawing.Point(384, 236);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Primary = true;
-            this.btnSalir.Size = new System.Drawing.Size(99, 28);
-            this.btnSalir.TabIndex = 16;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // materialLabel1
             // 
@@ -211,6 +217,10 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(504, 340);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
+            // MensajeError
+            // 
+            this.MensajeError.ContainerControl = this;
+            // 
             // frmAdminSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,18 +231,20 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdminSeguridad";
             this.Text = "frmAdminSeguridad";
+            this.Load += new System.EventHandler(this.frmAdminSeguridad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MensajeError)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField Txtpasword;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsusario;
         private System.Windows.Forms.ComboBox comboBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
@@ -241,5 +253,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnEliminar;
         private MaterialSkin.Controls.MaterialRaisedButton btnConsultar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ErrorProvider MensajeError;
     }
 }

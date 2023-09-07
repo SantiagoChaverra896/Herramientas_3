@@ -121,5 +121,10 @@ namespace Pantallas_Sistema_facturación
             frmAcercaDe acercaDe = new frmAcercaDe();
             AbrirForm(acercaDe);
         }
+
+        private void tabOpcionesMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

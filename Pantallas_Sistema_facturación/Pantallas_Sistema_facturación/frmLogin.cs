@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Pantallas_Sistema_facturación
 {
     public partial class frmLogin : Form
     {
+        public string serverName = "";
+        public string databaseName = "";
+        public string userNameG = "";
+        public string connectionString = "";
         public frmLogin()
         {
             InitializeComponent();
@@ -33,44 +40,45 @@ namespace Pantallas_Sistema_facturación
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+            {
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
-            string Respuesta = ""; //creamos variable para controlar si se encontro el usuario en la base de datos
-            if (TxtUsuario.Text != "" && TxtUsuario.Text != string.Empty)
+            try
             {
-                if (TxtUsuario.Text == "admin" && TxtPassword.Text == "123")
-                    Respuesta = "SANTIAGO CHAVERRA LOPEZ";
+                string Respuesta = "";
+                string username = TxtUsuario.Text;
+                string password = TxtPassword.Text;
+
+                Acceso_datos acceso_Datos = new Acceso_datos();
+                Respuesta = acceso_Datos.ValidarUsuario(username, password);
 
                 if (Respuesta != "")
                 {
-                    MessageBox.Show("Bienvenido : " + Respuesta); // Mostramos mensaje de bienvenida
-                    frmPrincipal frmppal = new frmPrincipal(); // creamos el objeto del formulario principal
-                    this.Hide(); // ocultamos el formulario de login
-                    frmppal.Show(); // mostramos el fomulario principal
-
+                    frmPrincipal frmppal = new frmPrincipal();
+                    this.Hide();
+                    frmppal.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y clave no encontrados");
                     TxtUsuario.Text = "";
                     TxtUsuario.Focus();
                     TxtPassword.Text = "";
-
+                    MessageBox.Show("Usuario clave no encontrados.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                
 
             }
-            else 
+            catch (Exception ex)
             {
-                MessageBox.Show("Debe ingresar un usuario y una clave");
+                MessageBox.Show("Error al intentar iniciar sesión: " + ex.Message, "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
