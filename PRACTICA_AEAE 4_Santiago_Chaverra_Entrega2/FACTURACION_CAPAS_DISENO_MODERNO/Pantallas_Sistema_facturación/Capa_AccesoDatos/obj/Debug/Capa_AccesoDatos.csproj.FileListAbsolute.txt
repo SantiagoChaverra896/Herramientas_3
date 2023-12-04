@@ -1,0 +1,6 @@
+C:\Users\sscl1\Desktop\FACTURACION_CAPAS_DISENO_MODERNO\Pantallas_Sistema_facturación\Capa_AccesoDatos\bin\Debug\Capa_AccesoDatos.dll
+C:\Users\sscl1\Desktop\FACTURACION_CAPAS_DISENO_MODERNO\Pantallas_Sistema_facturación\Capa_AccesoDatos\bin\Debug\Capa_AccesoDatos.pdb
+C:\Users\sscl1\Desktop\FACTURACION_CAPAS_DISENO_MODERNO\Pantallas_Sistema_facturación\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\sscl1\Desktop\FACTURACION_CAPAS_DISENO_MODERNO\Pantallas_Sistema_facturación\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\sscl1\Desktop\FACTURACION_CAPAS_DISENO_MODERNO\Pantallas_Sistema_facturación\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.dll
+C:\Users\sscl1\Desktop\FACTURACION_CAPAS_DISENO_MODERNO\Pantallas_Sistema_facturación\Capa_AccesoDatos\obj\Debug\Capa_AccesoDatos.pdb

@@ -1,0 +1,49 @@
+{
+    "Empleados": [
+        {
+            "IdEmpleado": 1,
+            "strNombre": "John Doe",
+            "NumDocumento": 123456789,
+            "StrDireccion": "123 Main Street",
+            "StrTelefono": "555-123-4567",
+            "StrEmail": "john.doe@example.com",
+            "DtmIngreso": "2023-10-26T14:30:00"
+        },
+        {
+            "IdEmpleado": 2,
+            "strNombre": "Jane Smith",
+            "NumDocumento": 987654321,
+            "StrDireccion": "456 Elm Street",
+            "StrTelefono": "555-987-6543",
+            "StrEmail": "jane.smith@example.com",
+            "DtmIngreso": "2023-10-27T09:15:00"
+        },
+        {
+            "IdEmpleado": 3,
+            "strNombre": "Alice Johnson",
+            "NumDocumento": 555555555,
+            "StrDireccion": "789 Oak Avenue",
+            "StrTelefono": "555-555-5555",
+            "StrEmail": "alice.johnson@example.com",
+            "DtmIngreso": "2023-10-28T11:45:00"
+        },
+        {
+            "IdEmpleado": 4,
+            "strNombre": "Bob Brown",
+            "NumDocumento": 444444444,
+            "StrDireccion": "987 Pine Road",
+            "StrTelefono": "555-444-4444",
+            "StrEmail": "bob.brown@example.com",
+            "DtmIngreso": "2023-10-29T08:30:00"
+        },
+        {
+            "IdEmpleado": 5,
+            "strNombre": "Eva White",
+            "NumDocumento": 888888888,
+            "StrDireccion": "567 Cedar Lane",
+            "StrTelefono": "555-888-8888",
+            "StrEmail": "eva.white@example.com",
+            "DtmIngreso": "2023-10-30T15:20:00"
+        }
+    ]
+}

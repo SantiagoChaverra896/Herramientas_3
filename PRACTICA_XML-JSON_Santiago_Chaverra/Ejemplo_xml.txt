@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Empleados>
+    <Empleado>
+        <IdEmpleado>1</IdEmpleado>
+        <strNombre>John Doe</strNombre>
+        <NumDocumento>123456789</NumDocumento>
+        <StrDireccion>123 Main Street</StrDireccion>
+        <StrTelefono>555-123-4567</StrTelefono>
+        <StrEmail>john.doe@example.com</StrEmail>
+        <DtmIngreso>2023-10-26T14:30:00</DtmIngreso>
+    </Empleado>
+    <Empleado>
+        <IdEmpleado>2</IdEmpleado>
+        <strNombre>Jane Smith</strNombre>
+        <NumDocumento>987654321</NumDocumento>
+        <StrDireccion>456 Elm Street</StrDireccion>
+        <StrTelefono>555-987-6543</StrTelefono>
+        <StrEmail>jane.smith@example.com</StrEmail>
+        <DtmIngreso>2023-10-27T09:15:00</DtmIngreso>
+    </Empleado>
+    <Empleado>
+        <IdEmpleado>3</IdEmpleado>
+        <strNombre>Luisa Smith</strNombre>
+        <NumDocumento>12456687</NumDocumento>
+        <StrDireccion>458 Star Street</StrDireccion>
+        <StrTelefono>555-987-6745</StrTelefono>
+        <StrEmail>luisa.smith@example.com</StrEmail>
+        <DtmIngreso>2023-10-27T09:15:00</DtmIngreso>
+    </Empleado>
+    <Empleado>
+        <IdEmpleado>4</IdEmpleado>
+        <strNombre>Luisa Sanz</strNombre>
+        <NumDocumento>103565448</NumDocumento>
+        <StrDireccion>457 Link Street</StrDireccion>
+        <StrTelefono>654-987-6745</StrTelefono>
+        <StrEmail>luisa.sanz@example.com</StrEmail>
+        <DtmIngreso>2023-10-27T09:15:00</DtmIngreso>
+    </Empleado>
+    <Empleado>
+        <IdEmpleado>5</IdEmpleado>
+        <strNombre>Rob Sanz</strNombre>
+        <NumDocumento>103845654</NumDocumento>
+        <StrDireccion>987 Palm Street</StrDireccion>
+        <StrTelefono>684-454-6745</StrTelefono>
+        <StrEmail>rob.sanz@example.com</StrEmail>
+        <DtmIngreso>2023-10-27T09:15:00</DtmIngreso>
+    </Empleado>
+</Empleados>

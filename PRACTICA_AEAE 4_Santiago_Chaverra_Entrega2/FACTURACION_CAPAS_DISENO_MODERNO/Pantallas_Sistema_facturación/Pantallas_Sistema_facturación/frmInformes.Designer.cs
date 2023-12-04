@@ -1,0 +1,345 @@
+﻿namespace Pantallas_Sistema_facturación
+{
+    partial class frmInformes
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnExcel = new MaterialSkin.Controls.MaterialRadioButton();
+            this.btnPdf = new MaterialSkin.Controls.MaterialRadioButton();
+            this.rBtnPantalla = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.fechaFin = new System.Windows.Forms.DateTimePicker();
+            this.fechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlContenedor.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.Controls.Add(this.richTextBox1);
+            this.pnlContenedor.Controls.Add(this.btnSalir);
+            this.pnlContenedor.Controls.Add(this.btnActualizar);
+            this.pnlContenedor.Controls.Add(this.btnExcel);
+            this.pnlContenedor.Controls.Add(this.btnPdf);
+            this.pnlContenedor.Controls.Add(this.rBtnPantalla);
+            this.pnlContenedor.Controls.Add(this.materialLabel5);
+            this.pnlContenedor.Controls.Add(this.fechaFin);
+            this.pnlContenedor.Controls.Add(this.fechaInicio);
+            this.pnlContenedor.Controls.Add(this.materialLabel4);
+            this.pnlContenedor.Controls.Add(this.comboBox2);
+            this.pnlContenedor.Controls.Add(this.materialLabel3);
+            this.pnlContenedor.Controls.Add(this.comboBox1);
+            this.pnlContenedor.Controls.Add(this.materialLabel2);
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(2, 48);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(547, 411);
+            this.pnlContenedor.TabIndex = 5;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.Location = new System.Drawing.Point(9, 176);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(536, 105);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Depth = 0;
+            this.btnSalir.Location = new System.Drawing.Point(362, 125);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Primary = true;
+            this.btnSalir.Size = new System.Drawing.Size(99, 33);
+            this.btnSalir.TabIndex = 12;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnActualizar.Depth = 0;
+            this.btnActualizar.Location = new System.Drawing.Point(163, 125);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Primary = true;
+            this.btnActualizar.Size = new System.Drawing.Size(99, 33);
+            this.btnActualizar.TabIndex = 11;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnExcel.AutoSize = true;
+            this.btnExcel.Depth = 0;
+            this.btnExcel.Font = new System.Drawing.Font("Roboto", 10F);
+            this.btnExcel.Location = new System.Drawing.Point(378, 94);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcel.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.btnExcel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Ripple = true;
+            this.btnExcel.Size = new System.Drawing.Size(62, 30);
+            this.btnExcel.TabIndex = 10;
+            this.btnExcel.TabStop = true;
+            this.btnExcel.Text = "Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPdf.AutoSize = true;
+            this.btnPdf.Depth = 0;
+            this.btnPdf.Font = new System.Drawing.Font("Roboto", 10F);
+            this.btnPdf.Location = new System.Drawing.Point(279, 93);
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPdf.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.btnPdf.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Ripple = true;
+            this.btnPdf.Size = new System.Drawing.Size(54, 30);
+            this.btnPdf.TabIndex = 9;
+            this.btnPdf.TabStop = true;
+            this.btnPdf.Text = "PDF";
+            this.btnPdf.UseVisualStyleBackColor = true;
+            // 
+            // rBtnPantalla
+            // 
+            this.rBtnPantalla.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rBtnPantalla.AutoSize = true;
+            this.rBtnPantalla.Depth = 0;
+            this.rBtnPantalla.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rBtnPantalla.Location = new System.Drawing.Point(165, 94);
+            this.rBtnPantalla.Margin = new System.Windows.Forms.Padding(0);
+            this.rBtnPantalla.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rBtnPantalla.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rBtnPantalla.Name = "rBtnPantalla";
+            this.rBtnPantalla.Ripple = true;
+            this.rBtnPantalla.Size = new System.Drawing.Size(97, 30);
+            this.rBtnPantalla.TabIndex = 8;
+            this.rBtnPantalla.TabStop = true;
+            this.rBtnPantalla.Text = "En pantalla";
+            this.rBtnPantalla.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(322, 55);
+            this.materialLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(48, 19);
+            this.materialLabel5.TabIndex = 7;
+            this.materialLabel5.Text = "F-FIN:";
+            // 
+            // fechaFin
+            // 
+            this.fechaFin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fechaFin.Location = new System.Drawing.Point(378, 54);
+            this.fechaFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaFin.Name = "fechaFin";
+            this.fechaFin.Size = new System.Drawing.Size(120, 20);
+            this.fechaFin.TabIndex = 6;
+            // 
+            // fechaInicio
+            // 
+            this.fechaInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.fechaInicio.Location = new System.Drawing.Point(194, 53);
+            this.fechaInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaInicio.Name = "fechaInicio";
+            this.fechaInicio.Size = new System.Drawing.Size(120, 20);
+            this.fechaInicio.TabIndex = 5;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(120, 53);
+            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(68, 19);
+            this.materialLabel4.TabIndex = 4;
+            this.materialLabel4.Text = "F-INICIO:";
+            this.materialLabel4.Click += new System.EventHandler(this.materialLabel4_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(439, 27);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(99, 21);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(322, 27);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(113, 19);
+            this.materialLabel3.TabIndex = 2;
+            this.materialLabel3.Text = "ORDENAR POR:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(194, 27);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(14, 26);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(174, 19);
+            this.materialLabel2.TabIndex = 0;
+            this.materialLabel2.Text = "SELECCIONE INFORME :";
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(113, 13);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(324, 19);
+            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Text = "GENERADOR DE INFORMES DE FACTURACIÓN";
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlContenedor, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(551, 461);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // frmInformes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(551, 461);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmInformes";
+            this.Text = "frmInformes";
+            this.Load += new System.EventHandler(this.frmInformes_Load);
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Panel pnlContenedor;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private MaterialSkin.Controls.MaterialRadioButton btnExcel;
+        private MaterialSkin.Controls.MaterialRadioButton btnPdf;
+        private MaterialSkin.Controls.MaterialRadioButton rBtnPantalla;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private System.Windows.Forms.DateTimePicker fechaFin;
+        private System.Windows.Forms.DateTimePicker fechaInicio;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnSalir;
+        private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+    }
+}

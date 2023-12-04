@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+#contenedor{
+    width:1800px;
+    height: 1000px;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    background: #a4a4a4
+    
+    
+}
+
+
+#header{
+    height: 25%;
+    background: #FFFFFF;
+    border-radius: 1em;
+    margin: 1em; 
+}
+
+#MenuH{
+    height: 20%;
+    background: #EAEDED;
+    border-radius: 1em;
+    
+}
+
+#ContenedorImagen{
+    height: 80%;
+    background: #FFFFFF;
+    border-radius: 1em;
+
+
+}
+
+
+#contenido{
+    height: 53%;
+    margin: 1em;
+
+}
+
+#MenuL{
+    width: 25%;
+    height: 95%;
+    background: #FFFFFF;
+    border-radius: 1em;
+    float: left;
+    margin: 0.5em;
+    
+
+}
+
+#ContenidoCentral{
+    width: 73.1%;
+    height: 95%;
+    background: #FFFFFF;
+    border-radius: 1em;
+    float: left;
+    margin: 0.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+}
+
+
+
+#Footer p{
+    color: black;
+    /*text-align: center;*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Footer{
+    height: 15%;
+    background: #EAEDED;
+    border-radius: 1em;
+    margin: 1em;
+
+    
+    
+}
+
+.buttons {
+    display: flex;
+    align-content: center;
+    
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #fff;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+    
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    color: white;
+}
+
+
+/*Tablas*/
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*estilos formulario*/
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 600px; /* Ancho del formulario */
+}
+
+table {
+    width: 100%;
+}
+
+table tr td {
+    padding: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
